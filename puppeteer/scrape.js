@@ -6,7 +6,7 @@ function extractItems() {
   const items = [];
   for (let node of extractedElements) {
     items.push({
-      title: node.querySelector(".soundTitle__title").innerText,
+      name: node.querySelector(".soundTitle__title").innerText,
       datePosted: node
         .querySelector(".soundTitle__uploadTime time")
         .getAttribute("datetime"),
@@ -58,7 +58,7 @@ async function scrapeInfiniteScrollItems(
 
   // Save extracted items to a file.
   await fs.writeFile(
-    "./data/sounds.json",
+    "./src/data/sounds.json",
     JSON.stringify(data, null, 2),
     (err) => (err ? console.log(err) : null)
   );

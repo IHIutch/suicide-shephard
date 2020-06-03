@@ -1,6 +1,6 @@
 [
   {
-    "title": "Olmos - I'm Sorry (feat. Yumi) [tofû Remix]",
+    "name": "Olmos - I'm Sorry (feat. Yumi) [tofû Remix]",
     "datePosted": "2018-04-11T16:07:03.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/olmos-im-sorry-feat-yumi-tofu-remix",
@@ -9,7 +9,7 @@
     "likes": "4,558"
   },
   {
-    "title": "Illenium - Beautiful Creatures (Julien Marchal Rework)",
+    "name": "Illenium - Beautiful Creatures (Julien Marchal Rework)",
     "datePosted": "2018-01-07T22:26:57.000Z",
     "tag": "Piano",
     "coverArt": "/mrsuicidesheep/illenium-beautiful-creatures-julien-marchal-rework",
@@ -18,7 +18,7 @@
     "likes": "6,562"
   },
   {
-    "title": "No Sleep | A Chill Mix",
+    "name": "No Sleep | A Chill Mix",
     "datePosted": "2017-12-03T17:46:03.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/no-sleep-a-chill-mix",
@@ -27,7 +27,7 @@
     "likes": "16.3K"
   },
   {
-    "title": "Other - Safety (feat. Brandon Banks) (O R I O N Remix)",
+    "name": "Other - Safety (feat. Brandon Banks) (O R I O N Remix)",
     "datePosted": "2017-09-08T17:11:52.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/other-safety-feat-brandon-banks-o-r-i-o-n-remix",
@@ -36,7 +36,7 @@
     "likes": "2,910"
   },
   {
-    "title": "Other - Safety (feat. Brandon Banks) (On June Remix)",
+    "name": "Other - Safety (feat. Brandon Banks) (On June Remix)",
     "datePosted": "2017-09-08T17:11:50.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/other-safety-feat-brandon-banks-on-june-remix",
@@ -45,7 +45,7 @@
     "likes": "15.8K"
   },
   {
-    "title": "Other - Safety (feat. Brandon Banks) (Pierce Remix)",
+    "name": "Other - Safety (feat. Brandon Banks) (Pierce Remix)",
     "datePosted": "2017-09-08T17:11:48.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/other-safety-feat-brandon-banks-pierce-remix",
@@ -54,7 +54,7 @@
     "likes": "1,467"
   },
   {
-    "title": "228k - When It's Cold Outside",
+    "name": "228k - When It's Cold Outside",
     "datePosted": "2017-07-26T23:38:06.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/228k-when-its-cold-outside",
@@ -63,7 +63,7 @@
     "likes": "6,099"
   },
   {
-    "title": "Mark Stoermer - Fingerspitzengefühl (R.O Remix)",
+    "name": "Mark Stoermer - Fingerspitzengefühl (R.O Remix)",
     "datePosted": "2017-07-09T17:09:40.000Z",
     "tag": "House",
     "coverArt": "/mrsuicidesheep/mark-stoermer-fingerspitzengefuhl-ro-remix",
@@ -72,7 +72,7 @@
     "likes": "3,185"
   },
   {
-    "title": "Julien Marchal - Insight XXX",
+    "name": "Julien Marchal - Insight XXX",
     "datePosted": "2017-05-28T16:39:12.000Z",
     "tag": "Piano",
     "coverArt": "/mrsuicidesheep/julien-marchal-insight-xxx",
@@ -81,7 +81,7 @@
     "likes": "5,079"
   },
   {
-    "title": "Seven & Seven - Amber",
+    "name": "Seven & Seven - Amber",
     "datePosted": "2017-05-23T18:12:02.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/seven-seven-amber",
@@ -90,7 +90,7 @@
     "likes": "5,704"
   },
   {
-    "title": "Alex Cortes x NOMAD - Home",
+    "name": "Alex Cortes x NOMAD - Home",
     "datePosted": "2017-04-25T18:38:33.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/alex-cortes-x-nomad-home",
@@ -99,7 +99,7 @@
     "likes": "7,728"
   },
   {
-    "title": "FARZAM - In Your Eyes",
+    "name": "FARZAM - In Your Eyes",
     "datePosted": "2017-04-16T17:39:23.000Z",
     "tag": "Dubstep",
     "coverArt": "/mrsuicidesheep/farzam-in-your-eyes",
@@ -108,7 +108,7 @@
     "likes": "4,282"
   },
   {
-    "title": "Clem Beatz - Lucioles",
+    "name": "Clem Beatz - Lucioles",
     "datePosted": "2017-04-09T20:49:59.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/clem-beatz-lucioles",
@@ -117,7 +117,7 @@
     "likes": "4,996"
   },
   {
-    "title": "INZO - Letting You Go (feat. LaMeduza)",
+    "name": "INZO - Letting You Go (feat. LaMeduza)",
     "datePosted": "2017-04-06T15:56:30.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/inzo-letting-you-go-feat-lameduza",
@@ -126,7 +126,7 @@
     "likes": "11K"
   },
   {
-    "title": "Flite - Earth Past",
+    "name": "Flite - Earth Past",
     "datePosted": "2017-03-30T20:44:47.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/flite-earth-past",
@@ -135,7 +135,7 @@
     "likes": "5,383"
   },
   {
-    "title": "Azaleh - Rainy Nights",
+    "name": "Azaleh - Rainy Nights",
     "datePosted": "2017-03-26T18:09:21.000Z",
     "tag": "Ambient",
     "coverArt": "/mrsuicidesheep/azaleh-rainy-nights",
@@ -144,7 +144,7 @@
     "likes": "5,612"
   },
   {
-    "title": "VALNTN - Fantasies (feat. Lexxi Saal)",
+    "name": "VALNTN - Fantasies (feat. Lexxi Saal)",
     "datePosted": "2017-03-23T20:04:10.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/valntn-fantasies-feat-lexxi-saal",
@@ -153,7 +153,7 @@
     "likes": "5,104"
   },
   {
-    "title": "SYML - Where's My Love (Acoustic)",
+    "name": "SYML - Where's My Love (Acoustic)",
     "datePosted": "2017-03-12T20:43:58.000Z",
     "tag": "Folk & Singer-Songwriter",
     "coverArt": "/mrsuicidesheep/syml-wheres-my-love-acoustic",
@@ -162,7 +162,7 @@
     "likes": "32.9K"
   },
   {
-    "title": "JYYE - Oxygen (feat. Brian Finlay)",
+    "name": "JYYE - Oxygen (feat. Brian Finlay)",
     "datePosted": "2017-03-11T19:49:33.000Z",
     "tag": "Deep House",
     "coverArt": "/mrsuicidesheep/jyye-oxygen-feat-brian-finlay",
@@ -171,7 +171,7 @@
     "likes": "9,459"
   },
   {
-    "title": "Molly Moore - Imaginary Friends (shndō Remix)",
+    "name": "Molly Moore - Imaginary Friends (shndō Remix)",
     "datePosted": "2017-03-08T17:00:19.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/molly-moore-imaginary-friends-shndo-remix",
@@ -180,7 +180,7 @@
     "likes": "4,449"
   },
   {
-    "title": "Ryder - Nirvana",
+    "name": "Ryder - Nirvana",
     "datePosted": "2017-03-07T18:32:48.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/ryder-nirvana",
@@ -189,7 +189,7 @@
     "likes": "5,685"
   },
   {
-    "title": "CloZee & Laura Hahn - The Experience (EGZOD Remix)",
+    "name": "CloZee & Laura Hahn - The Experience (EGZOD Remix)",
     "datePosted": "2017-02-22T17:16:50.000Z",
     "tag": "Drum & Bass",
     "coverArt": "/mrsuicidesheep/clozee-laura-hahn-the-experience-egzod-remix",
@@ -198,7 +198,7 @@
     "likes": "4,063"
   },
   {
-    "title": "KRANE x DNMO - Sakura",
+    "name": "KRANE x DNMO - Sakura",
     "datePosted": "2017-02-18T17:14:00.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/krane-x-dnmo-sakura",
@@ -207,7 +207,7 @@
     "likes": "4,786"
   },
   {
-    "title": "Retro Culture - Calling",
+    "name": "Retro Culture - Calling",
     "datePosted": "2017-02-17T19:39:49.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/retro-culture-calling",
@@ -216,7 +216,7 @@
     "likes": "4,028"
   },
   {
-    "title": "Luna Shadows - Cry Wolf (Solstis x SANDS Remix)",
+    "name": "Luna Shadows - Cry Wolf (Solstis x SANDS Remix)",
     "datePosted": "2017-02-16T17:07:31.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/luna-shadows-cry-wolf-solstis-x-sands-remix",
@@ -225,7 +225,7 @@
     "likes": "8,061"
   },
   {
-    "title": "AK - Immortal",
+    "name": "AK - Immortal",
     "datePosted": "2017-02-14T16:55:27.000Z",
     "tag": "Drum & Bass",
     "coverArt": "/mrsuicidesheep/ak-immortal",
@@ -234,7 +234,7 @@
     "likes": "3,533"
   },
   {
-    "title": "FLØRALS - Waves",
+    "name": "FLØRALS - Waves",
     "datePosted": "2017-02-10T17:52:42.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/florals-waves",
@@ -243,7 +243,7 @@
     "likes": "5,714"
   },
   {
-    "title": "Julian Calor - Restore",
+    "name": "Julian Calor - Restore",
     "datePosted": "2017-02-09T19:43:04.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/julian-calor-restore",
@@ -252,7 +252,7 @@
     "likes": "6,172"
   },
   {
-    "title": "Cavaro - Lost In You (feat. Faheem)(Heuse remix)",
+    "name": "Cavaro - Lost In You (feat. Faheem)(Heuse remix)",
     "datePosted": "2017-02-04T16:55:31.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/cavaro-lost-in-you-feat-faheemheuse-remix",
@@ -261,7 +261,7 @@
     "likes": "4,625"
   },
   {
-    "title": "Opia - YDU (Phiilo Redo)",
+    "name": "Opia - YDU (Phiilo Redo)",
     "datePosted": "2017-02-02T17:03:08.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/opia-ydu-phiilo-redo",
@@ -270,7 +270,7 @@
     "likes": "3,075"
   },
   {
-    "title": "MaLuca - Together",
+    "name": "MaLuca - Together",
     "datePosted": "2017-01-31T17:05:28.000Z",
     "tag": "Ambient",
     "coverArt": "/mrsuicidesheep/maluca-together",
@@ -279,7 +279,7 @@
     "likes": "3,460"
   },
   {
-    "title": "machineheart - Stonecold (BKAYE Remix)",
+    "name": "machineheart - Stonecold (BKAYE Remix)",
     "datePosted": "2017-01-29T17:05:58.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/machineheart-stonecold-bkaye-remix",
@@ -288,7 +288,7 @@
     "likes": "10.4K"
   },
   {
-    "title": "Papa Ya - Sunny (Evan Gartner Remix)",
+    "name": "Papa Ya - Sunny (Evan Gartner Remix)",
     "datePosted": "2017-01-27T17:11:14.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/papa-ya-sunny-evan-gartner-remix",
@@ -297,7 +297,7 @@
     "likes": "5,134"
   },
   {
-    "title": "CloZee - Secret Place",
+    "name": "CloZee - Secret Place",
     "datePosted": "2017-01-26T22:05:30.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/clozee-secret-place",
@@ -306,7 +306,7 @@
     "likes": "10.9K"
   },
   {
-    "title": "k?d - Genesis",
+    "name": "k?d - Genesis",
     "datePosted": "2017-01-25T17:08:00.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/kd-genesis",
@@ -315,7 +315,7 @@
     "likes": "4,234"
   },
   {
-    "title": "ENiGMA Dubz - Ready To Be With You",
+    "name": "ENiGMA Dubz - Ready To Be With You",
     "datePosted": "2017-01-13T17:20:49.000Z",
     "tag": "Ambient",
     "coverArt": "/mrsuicidesheep/enigma-dubz-ready-to-be-with-you",
@@ -324,7 +324,7 @@
     "likes": "2,599"
   },
   {
-    "title": "RKCB - Enough (HtPkt Remix)",
+    "name": "RKCB - Enough (HtPkt Remix)",
     "datePosted": "2017-01-11T17:10:41.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/rkcb-enough-htpkt-remix",
@@ -333,7 +333,7 @@
     "likes": "4,609"
   },
   {
-    "title": "VALNTN - Can't Let Go (feat. Emilia Ali)",
+    "name": "VALNTN - Can't Let Go (feat. Emilia Ali)",
     "datePosted": "2017-01-10T18:41:28.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/valntn-cant-let-go-feat-emilia-ali",
@@ -342,7 +342,7 @@
     "likes": "11K"
   },
   {
-    "title": "Define Light - Transit",
+    "name": "Define Light - Transit",
     "datePosted": "2017-01-09T17:06:08.000Z",
     "tag": "Electronic",
     "coverArt": "/mrsuicidesheep/define-light-transit",
@@ -351,7 +351,7 @@
     "likes": "2,737"
   },
   {
-    "title": "GT & Wildfire - Not Alone",
+    "name": "GT & Wildfire - Not Alone",
     "datePosted": "2017-01-07T19:36:02.000Z",
     "tag": "Dance & EDM",
     "coverArt": "/mrsuicidesheep/gt-wildfire-not-alone",
