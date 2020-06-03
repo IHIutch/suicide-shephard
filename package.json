@@ -9,8 +9,14 @@
   },
   "dependencies": {
     "apify": "^0.20.4",
+    "bootstrap-vue": "^2.15.0",
+    "dayjs": "^1.8.28",
     "gridsome": "^0.7.0",
-    "puppeteer": "^3.1.0",
-    "soundcloud": "^3.3.2"
+    "puppeteer": "^3.1.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.5.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
   }
 }
