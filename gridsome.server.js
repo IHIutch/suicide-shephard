@@ -11,16 +11,28 @@ module.exports = function(api) {
   });
 
   api.loadSource((actions) => {
-    const contenType = actions.addCollection({
+    const split = (val) => {
+      return val.split(" - ");
+    };
+
+    const soundsData = require("./src/data/sounds.json");
+    const collection = actions.addCollection({
       typeName: "sound",
     });
 
-    // scrape().then((res) => {
-    //   let sounds = res;
-    //   sounds.map((sound) => {
-    //     contenType.addNode(sound);
-    //   });
-    // });
+    const nodes = soundsData.map((val, idx) => {
+      let temp = split(val.name);
+      return {
+        ...val,
+        id: idx,
+        title: temp[1],
+        artist: temp[0],
+      };
+    });
+
+    nodes.map((val) => {
+      collection.addNode(val);
+    });
   });
 
   api.createPages(({ createPage }) => {
