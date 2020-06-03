@@ -6,15 +6,29 @@ function extractItems() {
   const items = [];
   for (let node of extractedElements) {
     items.push({
-      name: node.querySelector(".soundTitle__title").innerText,
-      datePosted: node
-        .querySelector(".soundTitle__uploadTime time")
-        .getAttribute("datetime"),
-      tag: node.querySelector(".soundTitle__tagContent").innerText,
-      coverArt: node.querySelector(".sound__coverArt").getAttribute("href"),
-      link: node.querySelector(".soundTitle__title").getAttribute("href"),
-      reposts: node.querySelector(".sc-button-repost").innerText,
-      likes: node.querySelector(".sc-button-like").innerText,
+      name: node.querySelector(".soundTitle__title")
+        ? node.querySelector(".soundTitle__title").innerText
+        : "null",
+      datePosted: node.querySelector(".soundTitle__uploadTime time")
+        ? node
+            .querySelector(".soundTitle__uploadTime time")
+            .getAttribute("datetime")
+        : "null",
+      tag: node.querySelector(".soundTitle__tagContent")
+        ? node.querySelector(".soundTitle__tagContent").innerText
+        : "null",
+      coverArt: node.querySelector(".sound__coverArt")
+        ? node.querySelector(".sound__coverArt").getAttribute("href")
+        : "null",
+      link: node.querySelector(".soundTitle__title")
+        ? node.querySelector(".soundTitle__title").getAttribute("href")
+        : "null",
+      reposts: node.querySelector(".sc-button-repost")
+        ? node.querySelector(".sc-button-repost").innerText
+        : "null",
+      likes: node.querySelector(".sc-button-like")
+        ? node.querySelector(".sc-button-like").innerText
+        : "null",
     });
   }
   return items;
@@ -32,13 +46,19 @@ async function scrapeInfiniteScrollItems(
     while (items.length < itemTargetCount) {
       items = await page.evaluate(extractItems);
       previousHeight = await page.evaluate("document.body.scrollHeight");
+      console.log(1);
       await page.evaluate("window.scrollTo(0, document.body.scrollHeight)");
+      console.log(2);
       await page.waitForFunction(
         `document.body.scrollHeight > ${previousHeight}`
       );
+      console.log(3);
       await page.waitFor(scrollDelay);
+      console.log(4);
     }
-  } catch (e) {}
+  } catch (e) {
+    console.log(e);
+  }
   return items;
 }
 
