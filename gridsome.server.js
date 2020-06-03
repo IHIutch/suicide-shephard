@@ -22,11 +22,15 @@ module.exports = function(api) {
 
     const nodes = soundsData.map((val, idx) => {
       let temp = split(val.name);
+      let cover = val.coverUrl
+        ? val.coverUrl.match(/\((.*?)\)/)[1].replace(/('|")/g, "")
+        : null;
       return {
         ...val,
         id: idx,
         title: temp[1],
         artist: temp[0],
+        coverArt: cover,
       };
     });
 

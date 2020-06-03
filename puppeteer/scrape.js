@@ -17,8 +17,9 @@ function extractItems() {
       tag: node.querySelector(".soundTitle__tagContent")
         ? node.querySelector(".soundTitle__tagContent").innerText
         : "null",
-      coverArt: node.querySelector(".sound__coverArt")
-        ? node.querySelector(".sound__coverArt").getAttribute("href")
+      coverUrl: node.querySelector(".sound__coverArt > .sc-artwork > span")
+        ? node.querySelector(".sound__coverArt > .sc-artwork > span").style
+            .backgroundImage
         : "null",
       link: node.querySelector(".soundTitle__title")
         ? node.querySelector(".soundTitle__title").getAttribute("href")
@@ -45,17 +46,13 @@ async function scrapeInfiniteScrollItems(
     let previousHeight;
     while (items.length < itemTargetCount) {
       items = await page.evaluate(extractItems);
-      previousHeight = await page.evaluate("document.body.scrollHeight");
-      console.log(1);
-      await page.evaluate("window.scrollTo(0, document.body.scrollHeight)");
-      console.log(2);
-      await page.waitForFunction(
-        `document.body.scrollHeight > ${previousHeight}`
-      );
-      console.log(3);
+      previousHeight = await page.evaluate("window.scrollY");
+      await page.evaluate("window.scrollBy(0, window.innerHeight)");
+      await page.waitForFunction(`window.scrollY > ${previousHeight}`);
       await page.waitFor(scrollDelay);
-      console.log(4);
     }
+    await page.evaluate("window.scrollBy(0, window.innerHeight)");
+    items = await page.evaluate(extractItems);
   } catch (e) {
     console.log(e);
   }
