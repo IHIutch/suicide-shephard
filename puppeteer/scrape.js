@@ -14,15 +14,19 @@ const puppeteer = require("puppeteer");
           .querySelector(".soundTitle__uploadTime time")
           .getAttribute("datetime"),
         tag: node.querySelector(".soundTitle__tagContent").innerText,
-        // coverArt: node.querySelector(".sound__coverArt").getAttribute(href),
-        // link: node.querySelector(".soundTitle__title").getAttribute(href),
+        coverArt: node.querySelector(".sound__coverArt").getAttribute("href"),
+        link: node.querySelector(".soundTitle__title").getAttribute("href"),
+        reposts: node.querySelector(".sc-button-repost").innerText,
+        likes: node.querySelector(".sc-button-like").innerText,
       };
     });
   });
 
-  fs.writeFile("./data/sounds.json", JSON.stringify(data, null, 2), (err) =>
-    err ? console.log(err) : null
+  await fs.writeFile(
+    "./data/sounds.json",
+    JSON.stringify(data, null, 2),
+    (err) => (err ? console.log(err) : null)
   );
 
-  await browser.close();
+  browser.close();
 })();
