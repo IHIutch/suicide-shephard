@@ -1,0 +1,105 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $size, $value in $sizes {
+      .w#{$infix}-#{$size} {
+        width: $value !important;
+      }
+      .h#{$infix}-#{$size} {
+        height: $value !important;
+      }
+    }
+  }
+}
+
+@each $size, $value in $sizes {
+  .top-#{$size} {
+    top: $value !important;
+  }
+  .bottom-#{$size} {
+    bottom: $value !important;
+  }
+  .left-#{$size} {
+    left: $value !important;
+  }
+  .right-#{$size} {
+    right: $value !important;
+  }
+  @if $value != "auto" and $value != 0 {
+    .top-n#{$size} {
+      top: -$value !important;
+    }
+    .bottom-n#{$size} {
+      bottom: -$value !important;
+    }
+    .left-n#{$size} {
+      left: -$value !important;
+    }
+    .right-n#{$size} {
+      right: -$value !important;
+    }
+  }
+  .min-h-#{$size} {
+    min-height: $value !important;
+  }
+  .min-w-#{$size} {
+    min-width: $value !important;
+  }
+  .max-h-#{$size} {
+    max-height: $value !important;
+  }
+  .max-w-#{$size} {
+    max-width: $value !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-link-#{$color} {
+    @extend .btn-link;
+    color: $value;
+    &:hover {
+      color: darken($value, 10);
+    }
+    &:focus {
+      text-decoration: none !important;
+      box-shadow: 0 0 0 0.2rem rgba($value, 0.25);
+    }
+  }
+}
+
+@each $value in $object-fit {
+  .object-#{$value} {
+    object-fit: $value;
+  }
+}
+
+@each $size, $value in $font-sizes {
+  .text-#{$size} {
+    font-size: $value !important;
+  }
+}
+
+@each $name, $value in $tracking {
+  .tracking-#{$name} {
+    letter-spacing: $value * 1em !important;
+  }
+}
+
+@each $name, $value in $font-weights {
+  .font-weight-#{$name} {
+    font-weight: $value !important;
+  }
+}
+
+@each $name, $value in $leading {
+  .leading-#{$name} {
+    line-height: $value !important;
+  }
+}
+
+@each $name, $value in $opacity {
+  .opacity-#{$name} {
+    opacity: $value !important;
+  }
+}
