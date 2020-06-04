@@ -103,3 +103,9 @@
     opacity: $value !important;
   }
 }
+
+@each $value in $indices {
+  .z-#{$value} {
+    z-index: $value !important;
+  }
+}

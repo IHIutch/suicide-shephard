@@ -1,11 +1,20 @@
 <template>
   <Layout>
+    <b-navbar type="light" variant="dark" sticky>
+      <b-nav-form>
+        <b-form-input
+          class="mr-sm-2"
+          placeholder="Search"
+          v-model="filter.search"
+        ></b-form-input>
+      </b-nav-form>
+    </b-navbar>
     <b-container fluid>
       <b-row>
         <b-col
           md="3"
           lg="2"
-          class="position-fixed top-0 left-0 bottom-0 px-0 bg-light"
+          class="position-fixed top-0 left-0 bottom-0 px-0 bg-light pt-12"
         >
           <div class="p-3 h-100 overflow-auto">
             <h2>Filters</h2>
@@ -24,71 +33,108 @@
                   placeholder="Start date"
                   class="mb-2"
                   hide-header
+                  :date-format-options="{
+                    year: 'numeric',
+                    month: 'numeric',
+                    day: 'numeric',
+                  }"
                 ></b-form-datepicker>
                 <b-form-datepicker
                   id="publishEnd"
                   v-model="filter.publishEnd"
                   placeholder="End date"
                   hide-header
+                  :date-format-options="{
+                    year: 'numeric',
+                    month: 'numeric',
+                    day: 'numeric',
+                  }"
                 ></b-form-datepicker>
               </div>
             </div>
             <div class="mb-4">
-              <div>
-                <span
-                  class="text-sm font-weight-semibold text-uppercase tracking-wider"
-                >
-                  Artist
-                </span>
-              </div>
-              <div>
-                <b-form-group label="Artists">
-                  <b-form-checkbox-group
-                    v-model="filter.artist"
-                    :options="artistList"
-                    name="artist"
-                    stacked
-                  ></b-form-checkbox-group>
-                </b-form-group>
-              </div>
+              <b-form-group
+                label="Artists"
+                label-class="text-sm font-weight-semibold text-uppercase tracking-wider"
+              >
+                <div>
+                  <div v-for="(artist, idx) in filter.artist">
+                    <b-button
+                      variant="link"
+                      size="sm"
+                      class="d-flex justify-content-between"
+                      block
+                    >
+                      <span>{{ artist }}</span>
+                      <span>x</span>
+                    </b-button>
+                  </div>
+                </div>
+                <b-form-checkbox-group
+                  v-model="filter.artist"
+                  :options="artistList"
+                  name="artist"
+                  stacked
+                ></b-form-checkbox-group>
+              </b-form-group>
             </div>
             <div class="mb-4">
-              <div>
-                <span
-                  class="text-sm font-weight-semibold text-uppercase tracking-wider"
-                >
-                  Tag
-                </span>
-              </div>
-              <div>
-                <b-form-group label="Tags">
-                  <b-form-checkbox-group
-                    v-model="filter.tag"
-                    :options="tagList"
-                    name="tag"
-                    stacked
-                  ></b-form-checkbox-group>
-                </b-form-group>
-              </div>
+              <b-form-group
+                label="Tags"
+                label-class="text-sm font-weight-semibold text-uppercase tracking-wider"
+              >
+                <div>
+                  <div v-for="(tag, idx) in filter.tag">
+                    <b-button
+                      variant="link"
+                      size="sm"
+                      class="d-flex justify-content-between"
+                      block
+                    >
+                      <span>{{ tag }}</span>
+                      <span>x</span>
+                    </b-button>
+                  </div>
+                </div>
+                <b-form-checkbox-group
+                  v-model="filter.tag"
+                  :options="tagList"
+                  name="tag"
+                  stacked
+                ></b-form-checkbox-group>
+              </b-form-group>
             </div>
           </div>
         </b-col>
         <b-col md="9" lg="10" class="ml-auto">
-          <div
-            v-for="(sound, idx) in filteredSounds"
-            class="border rounded mb-4 p-4"
-          >
-            <div class="d-flex justify-content-between">
-              <div>
-                <a :href="sound.link">{{ sound.artist }} - {{ sound.title }}</a>
+          <main role="main" class="py-4">
+            <transition-group
+              name="staggered-fade"
+              :css="false"
+              @before-enter="beforeEnter"
+              @enter="enter"
+              @leave="leave"
+            >
+              <div
+                v-for="(sound, idx) in filteredSounds"
+                class="border rounded mb-4 p-4"
+                :key="sound.id"
+              >
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <a :href="sound.link"
+                      >{{ sound.artist }} - {{ sound.title }}</a
+                    >
+                  </div>
+                  <div>
+                    <span>
+                      {{ sound.datePosted | dayjs("MMM D, YYYY") }}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <span>
-                  {{ sound.datePosted | dayjs("MMM D, YYYY") }}
-                </span>
-              </div>
-            </div>
-          </div>
+            </transition-group>
+          </main>
         </b-col>
       </b-row>
     </b-container>
@@ -125,13 +171,13 @@ export default {
       sounds: [],
       filter: {
         publishStart: "",
-        publishEnd: "",
+        publishEnd: new Date(),
         artist: [],
         tag: [],
+        search: "",
       },
     };
   },
-  methods: {},
   created() {
     this.sounds = this.$page.sounds.edges.map((sound) => {
       let node = sound.node;
@@ -164,6 +210,26 @@ export default {
       if (this.filter.tag.length) {
         arr = arr.filter((sound) => {
           return this.filter.tag.indexOf(sound.tag) !== -1;
+        });
+      }
+      if (this.filter.publishStart) {
+        arr = arr.filter((sound) => {
+          return (
+            new Date(sound.datePosted) > new Date(this.filter.publishStart)
+          );
+        });
+      }
+      if (this.filter.publishEnd) {
+        arr = arr.filter((sound) => {
+          return new Date(sound.datePosted) < new Date(this.filter.publishEnd);
+        });
+      }
+      if (this.filter.search) {
+        arr = arr.filter((sound) => {
+          return (
+            sound.artist.includes(this.filter.search) ||
+            sound.title.includes(this.filter.search)
+          );
         });
       }
 
