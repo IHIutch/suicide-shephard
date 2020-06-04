@@ -74,14 +74,17 @@
           </div>
         </b-col>
         <b-col md="9" lg="10" class="ml-auto">
-          <div v-for="(sound, idx) in sounds" class="border rounded mb-4 p-4">
+          <div
+            v-for="(sound, idx) in filteredSounds"
+            class="border rounded mb-4 p-4"
+          >
             <div class="d-flex justify-content-between">
               <div>
                 <a :href="sound.link">{{ sound.artist }} - {{ sound.title }}</a>
               </div>
               <div>
                 <span>
-                  {{ sound.datePosted | dayjs("MMMM D, YYYY - h:mmA") }}
+                  {{ sound.datePosted | dayjs("MMM D, YYYY") }}
                 </span>
               </div>
             </div>
@@ -149,6 +152,22 @@ export default {
     },
     tagList() {
       return [...new Set(this.sounds.map((sound) => sound.tag))].sort();
+    },
+    filteredSounds() {
+      let arr = this.sounds;
+
+      if (this.filter.artist.length) {
+        arr = arr.filter((sound) => {
+          return this.filter.artist.indexOf(sound.artist) !== -1;
+        });
+      }
+      if (this.filter.tag.length) {
+        arr = arr.filter((sound) => {
+          return this.filter.tag.indexOf(sound.tag) !== -1;
+        });
+      }
+
+      return arr;
     },
   },
   filters: {
