@@ -109,18 +109,16 @@
         <b-col md="9" lg="10" class="ml-auto">
           <main role="main" class="py-4">
             <transition-group
-              name="staggered-fade"
-              :css="false"
-              @before-enter="beforeEnter"
-              @enter="enter"
-              @leave="leave"
+              name="list-complete"
+              tag="div"
+              class="position-relative"
             >
               <div
                 v-for="(sound, idx) in filteredSounds"
-                class="border rounded mb-4 p-4"
+                class="border rounded mb-4 p-4 transition-fast w-100"
                 :key="sound.id"
               >
-                <div class="d-flex justify-content-between">
+                <div class="d-flex w-100 justify-content-between">
                   <div>
                     <a :href="sound.link"
                       >{{ sound.artist }} - {{ sound.title }}</a
@@ -161,6 +159,7 @@ query {
 
 <script>
 import dayjs from "dayjs";
+import Velocity from "velocity-animate";
 
 export default {
   metaInfo: {
@@ -243,3 +242,17 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.transition-fast {
+  transition: all 0.4s;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  // transform: translateY(30px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+</style>

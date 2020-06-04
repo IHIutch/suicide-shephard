@@ -12,7 +12,8 @@
     "bootstrap-vue": "^2.15.0",
     "dayjs": "^1.8.28",
     "gridsome": "^0.7.0",
-    "puppeteer": "^3.1.0"
+    "puppeteer": "^3.1.0",
+    "velocity-animate": "^1.5.2"
   },
   "devDependencies": {
     "bootstrap": "^4.5.0",
