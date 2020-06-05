@@ -13,6 +13,7 @@
     "dayjs": "^1.8.28",
     "gridsome": "^0.7.0",
     "puppeteer": "^3.1.0",
+    "v-calendar": "^1.0.6",
     "velocity-animate": "^1.5.2"
   },
   "devDependencies": {

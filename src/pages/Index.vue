@@ -14,7 +14,7 @@
         <b-col
           md="3"
           lg="2"
-          class="position-fixed top-0 left-0 bottom-0 px-0 bg-light pt-12"
+          class="position-fixed top-0 left-0 bottom-0 px-0 bg-light pt-12 z-1"
         >
           <div class="p-3 h-100 overflow-auto">
             <h2>Filters</h2>
@@ -27,6 +27,13 @@
                 </span>
               </div>
               <div>
+                <date-picker
+                  v-model="filter.dates"
+                  mode="range"
+                  :popover="{ visibility: 'focus' }"
+                />
+              </div>
+              <!-- <div>
                 <b-form-datepicker
                   id="publishStart"
                   v-model="filter.publishStart"
@@ -50,7 +57,7 @@
                     day: 'numeric',
                   }"
                 ></b-form-datepicker>
-              </div>
+              </div> -->
             </div>
             <div class="mb-4">
               <b-form-group
@@ -161,14 +168,23 @@ query {
 import dayjs from "dayjs";
 import Velocity from "velocity-animate";
 
+import DatePicker from "v-calendar/lib/components/date-picker.umd";
+
 export default {
   metaInfo: {
     title: "Hello, world!",
+  },
+  components: {
+    DatePicker,
   },
   data() {
     return {
       sounds: [],
       filter: {
+        dates: {
+          start: "",
+          end: "",
+        },
         publishStart: "",
         publishEnd: new Date(),
         artist: [],
@@ -211,16 +227,14 @@ export default {
           return this.filter.tag.indexOf(sound.tag) !== -1;
         });
       }
-      if (this.filter.publishStart) {
+      if (this.filter.dates.start) {
         arr = arr.filter((sound) => {
-          return (
-            new Date(sound.datePosted) > new Date(this.filter.publishStart)
-          );
+          return new Date(sound.datePosted) > new Date(this.filter.dates.start);
         });
       }
-      if (this.filter.publishEnd) {
+      if (this.filter.dates.end) {
         arr = arr.filter((sound) => {
-          return new Date(sound.datePosted) < new Date(this.filter.publishEnd);
+          return new Date(sound.datePosted) < new Date(this.filter.dates.end);
         });
       }
       if (this.filter.search) {
@@ -250,7 +264,6 @@ export default {
 .list-complete-enter, .list-complete-leave-to
 /* .list-complete-leave-active below version 2.1.8 */ {
   opacity: 0;
-  // transform: translateY(30px);
 }
 .list-complete-leave-active {
   position: absolute;
